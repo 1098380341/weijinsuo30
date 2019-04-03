@@ -1,0 +1,412 @@
+// 定义个颜色变量
+@main-color: #e92322;
+
+//  focus伪类添加 使用对应伪类覆盖
+
+a{
+color: #666;
+&:hover{
+    color:#666;
+    text-decoration: none;
+}
+&:focus{
+    color:#666;
+    text-decoration: none;
+}
+}
+
+// 头部
+#header{
+    border-bottom: 1px solid #ccc;
+    .container{
+        .row{
+            >div{
+                line-height: 40px;
+                font-size: 12px;
+                // 除了第一个后面相邻的div
+                &~div{
+                    border-left: 1px solid #ccc;
+                }
+                .btn-link{
+                    color: #666;
+                }
+
+                .mobile-link{
+                    position: relative;
+                    display: block;
+                   
+                      img{
+                //要定位托表 不然会占位子
+                position: absolute;
+                top: 40px;
+                left: 50%; 
+                // 返回自身50%
+                transform: translateX(-50%);
+                display: none;
+               }
+                &:hover{
+                    img{
+                        display: block;
+                    }
+                }
+                }
+             
+            }
+        }
+    }
+}
+
+
+// 导航
+#nav{
+    background-color: #fff;
+    margin-bottom: 0;
+    .container{
+        .navbar-header{
+             // 导航条的折叠按钮  小屏幕显示的
+             .navbar-toggle {
+                 // 80 - 34 == 46 / 2 == 23
+                margin-top: 23px;
+             }
+             // 品牌logo
+             .navbar-brand {
+                line-height: 50px;
+                // 因为bootstrap固定为50px 覆盖变成
+                height: 80px;
+                // 注意不要a设置字体大小里面回车换行 有大小  有间距 造成个人中心掉下来
+                // font-size: 30px;
+                .icon-icon {
+                    font-size: 30px;
+                    color: @main-color;
+                }
+
+                .icon-logo {
+                    font-size: 28px;
+                    color: #333;
+                }
+            }
+        }
+
+
+        // 导航身体
+        .navbar-collapse {
+            .navbar-nav{
+               li{
+                   a{
+                       line-height: 50px;
+                       &:hover{
+                           
+                               border-bottom: 2px solid @main-color;
+                         
+                       }
+                   }
+                   &.active{
+                       a{
+                           background-color: #fff;
+                           border-bottom: 2px solid @main-color;
+                       }
+                   }
+               }
+            }
+        }
+    }
+}
+
+
+// 轮播图
+
+.slide{
+    .small-image{
+        width: 100%;
+    }
+    .large-image{
+        width: 100%;
+        height: 410px;
+        // 背景居中
+        background-position: center center;
+    }
+}
+
+// 交易保障
+
+#feature{
+    .container{
+        padding: 40px 0;
+        .row{
+            >div{
+                margin-top: 10px;
+                .media{
+                    display: flex;
+                   justify-content: space-around;
+                   align-items: center;
+                   a{
+                       &:hover{
+                           color: @main-color;
+                       }
+                   }
+                        
+                }
+              
+            }
+        }
+    }
+}
+
+//预约
+#booking{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+}
+
+//商品
+#tab{
+    padding: 40px 0;
+    background-color: #f5f5f5;
+    .container{
+        padding: 5px;
+        .swiper-container{
+            width: 100%;
+            .swiper-slide{
+                width: auto;
+                ul{
+                    width: auto;
+                }
+            }
+        }
+        .nav-tabs{
+            
+            border: 1px solid transparent;
+            li{
+                a{
+                    font-size: 18px;
+                    color: #666;
+                    height: 48px;
+                    &:hover{
+                        background-color: #f5f5ff;
+                        border: 1px solid transparent;
+                    }
+                }
+                &.active{
+                    a{
+                        background-color: #f5f5f5;
+                    border: 1px solid transparent;
+                    border-bottom: 2px solid @main-color;
+                    }
+                }
+               
+            }
+        }
+
+
+
+        .tab-content{
+            .container{
+                >.row{
+                    >div{
+                        .product{
+                            display: flex;
+                            background-color: #fff;
+                            margin-top: 20px;
+                            position: relative;
+                            &.active{
+                                background-color: @main-color;
+                                color: #fff;
+                                &::before{
+                                    content:'\e915';
+                                    font-family: 'itcast';
+                                 font-size: 30px;
+                                 position: absolute;
+                                 top: -6px;
+                                 left: 0;
+                                
+                                }
+                            }
+                           
+                            .tab-left{
+                               
+                                padding: 10px;
+                                flex: 1;
+                                .row{
+                                    div{
+                                        p{
+                                            // text-align: center;
+                                        }
+                                       &:nth-child(2n){
+                                        text-align: right;
+                                    }
+                                    }
+                                    
+                                }
+                                
+                                h4{
+                                    text-align: center;
+                                }
+                               
+                            }
+
+                            .tab-right{
+                                width: 100px;
+                                height: 180px;
+                                border: 1px dashed #ccc;
+                                text-align: center;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                position: relative;
+                               .tooltips{
+                                   position: absolute;
+                                   top: 20px;
+
+                                   button{
+                                       &:first-child{
+                                        color: @main-color;
+                                        border: 1px solid @main-color;
+                                        background-color: #fff;
+                                       }
+                                       // 选中最后一个当前按钮类型的元素排除别的元素
+                                        // 因为插件动态添加一个元素导致按钮不是最后一个
+                                       &:last-of-type{
+                                        color: yellow;
+                                        border: 1px solid yellow;
+                                        
+                                        background-color: #fff;
+                                       }
+                                   }
+                               }
+                                strong{
+                                    font-size: 30px;
+                                }
+                                sub{
+                                    position: absolute;
+                                    bottom: 90px;
+                                    left: 60px;
+                                }
+
+                                &::before,&::after{
+                                    position: absolute;
+                                    content: '';
+                                    width: 16px;
+                                    height: 16px;
+                                    border-radius: 50%;
+                                    background-color: #f5f5f5;
+                                    left: -8px;
+                                }
+                                &::before{
+                                    top: -8px;
+                                }
+                                &::after{
+                                    bottom: -8px;
+                                }
+
+                                
+                               
+                            }
+                        }
+                      
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 全部新闻
+
+#news{
+    padding: 40px 0;
+    .container{
+        .row{
+            >div{
+                h4{
+                    // 行高40 把边框顶下去一点
+                    line-height: 40px;
+                    text-align: center;
+                    border-bottom: 1px dashed #ccc;
+                    position: relative;
+
+                     &::after{
+                        //  定位才能看得见
+                    position: absolute;     
+                    content:'';
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: #ccc;
+                    right: -10px;
+                    bottom:-5px;
+
+                }
+                }
+               
+            }
+            .nav-tabs{
+                border-bottom: 0px;
+                @media(max-width:992px){
+
+                     li{
+                         width: 25%;
+                         display: flex;
+                         justify-content: center;
+                        }
+                    }
+                    li{
+                        a{
+                            // 宽度写死 不然会变大
+                            width: 60px;
+                            border: 0;
+                            margin-bottom: 10px;
+                            border-radius: 50%;
+                            i{
+                                font-size: 30px;
+                            }
+                            &:hover{
+                                background-color: @main-color;
+                                color: #ccc;
+                            }
+                           
+                        }
+                        &.active{
+                                a{
+                                    background-color: @main-color;
+                                    color: #ccc;
+                                }
+                        }
+                    }
+                
+                   
+                
+            }
+
+            .tab-content{
+                ul{
+                    padding-left: 20px;
+                    li{
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 合作伙伴
+#footer{
+    .row{
+        >div{
+            a{
+                display: block;
+                i{
+                    font-size: 60px;
+                }
+                &:hover{
+                   color: @main-color;
+                }
+            }
+
+        }
+    }
+}
+
+

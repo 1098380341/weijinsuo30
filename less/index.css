@@ -1,0 +1,265 @@
+a {
+  color: #666;
+}
+a:hover {
+  color: #666;
+  text-decoration: none;
+}
+a:focus {
+  color: #666;
+  text-decoration: none;
+}
+#header {
+  border-bottom: 1px solid #ccc;
+}
+#header .container .row > div {
+  line-height: 40px;
+  font-size: 12px;
+}
+#header .container .row > div ~ div {
+  border-left: 1px solid #ccc;
+}
+#header .container .row > div .btn-link {
+  color: #666;
+}
+#header .container .row > div .mobile-link {
+  position: relative;
+  display: block;
+}
+#header .container .row > div .mobile-link img {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+#header .container .row > div .mobile-link:hover img {
+  display: block;
+}
+#nav {
+  background-color: #fff;
+  margin-bottom: 0;
+}
+#nav .container .navbar-header .navbar-toggle {
+  margin-top: 23px;
+}
+#nav .container .navbar-header .navbar-brand {
+  line-height: 50px;
+  height: 80px;
+}
+#nav .container .navbar-header .navbar-brand .icon-icon {
+  font-size: 30px;
+  color: #e92322;
+}
+#nav .container .navbar-header .navbar-brand .icon-logo {
+  font-size: 28px;
+  color: #333;
+}
+#nav .container .navbar-collapse .navbar-nav li a {
+  line-height: 50px;
+}
+#nav .container .navbar-collapse .navbar-nav li a:hover {
+  border-bottom: 2px solid #e92322;
+}
+#nav .container .navbar-collapse .navbar-nav li.active a {
+  background-color: #fff;
+  border-bottom: 2px solid #e92322;
+}
+.slide .small-image {
+  width: 100%;
+}
+.slide .large-image {
+  width: 100%;
+  height: 410px;
+  background-position: center center;
+}
+#feature .container {
+  padding: 40px 0;
+}
+#feature .container .row > div {
+  margin-top: 10px;
+}
+#feature .container .row > div .media {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#feature .container .row > div .media a:hover {
+  color: #e92322;
+}
+#booking {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 20px 0;
+}
+#tab {
+  padding: 40px 0;
+  background-color: #f5f5f5;
+}
+#tab .container {
+  padding: 5px;
+}
+#tab .container .swiper-container {
+  width: 100%;
+}
+#tab .container .swiper-container .swiper-slide {
+  width: auto;
+}
+#tab .container .swiper-container .swiper-slide ul {
+  width: auto;
+}
+#tab .container .nav-tabs {
+  border: 1px solid transparent;
+}
+#tab .container .nav-tabs li a {
+  font-size: 18px;
+  color: #666;
+  height: 48px;
+}
+#tab .container .nav-tabs li a:hover {
+  background-color: #f5f5ff;
+  border: 1px solid transparent;
+}
+#tab .container .nav-tabs li.active a {
+  background-color: #f5f5f5;
+  border: 1px solid transparent;
+  border-bottom: 2px solid #e92322;
+}
+#tab .container .tab-content .container > .row > div .product {
+  display: flex;
+  background-color: #fff;
+  margin-top: 20px;
+  position: relative;
+}
+#tab .container .tab-content .container > .row > div .product.active {
+  background-color: #e92322;
+  color: #fff;
+}
+#tab .container .tab-content .container > .row > div .product.active::before {
+  content: '\e915';
+  font-family: 'itcast';
+  font-size: 30px;
+  position: absolute;
+  top: -6px;
+  left: 0;
+}
+#tab .container .tab-content .container > .row > div .product .tab-left {
+  padding: 10px;
+  flex: 1;
+}
+#tab .container .tab-content .container > .row > div .product .tab-left .row div:nth-child(2n) {
+  text-align: right;
+}
+#tab .container .tab-content .container > .row > div .product .tab-left h4 {
+  text-align: center;
+}
+#tab .container .tab-content .container > .row > div .product .tab-right {
+  width: 100px;
+  height: 180px;
+  border: 1px dashed #ccc;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#tab .container .tab-content .container > .row > div .product .tab-right .tooltips {
+  position: absolute;
+  top: 20px;
+}
+#tab .container .tab-content .container > .row > div .product .tab-right .tooltips button:first-child {
+  color: #e92322;
+  border: 1px solid #e92322;
+  background-color: #fff;
+}
+#tab .container .tab-content .container > .row > div .product .tab-right .tooltips button:last-of-type {
+  color: yellow;
+  border: 1px solid yellow;
+  background-color: #fff;
+}
+#tab .container .tab-content .container > .row > div .product .tab-right strong {
+  font-size: 30px;
+}
+#tab .container .tab-content .container > .row > div .product .tab-right sub {
+  position: absolute;
+  bottom: 90px;
+  left: 60px;
+}
+#tab .container .tab-content .container > .row > div .product .tab-right::before,
+#tab .container .tab-content .container > .row > div .product .tab-right::after {
+  position: absolute;
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  left: -8px;
+}
+#tab .container .tab-content .container > .row > div .product .tab-right::before {
+  top: -8px;
+}
+#tab .container .tab-content .container > .row > div .product .tab-right::after {
+  bottom: -8px;
+}
+#news {
+  padding: 40px 0;
+}
+#news .container .row > div h4 {
+  line-height: 40px;
+  text-align: center;
+  border-bottom: 1px dashed #ccc;
+  position: relative;
+}
+#news .container .row > div h4::after {
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  right: -10px;
+  bottom: -5px;
+}
+#news .container .row .nav-tabs {
+  border-bottom: 0px;
+}
+@media (max-width: 992px) {
+  #news .container .row .nav-tabs li {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+  }
+}
+#news .container .row .nav-tabs li a {
+  width: 60px;
+  border: 0;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+#news .container .row .nav-tabs li a i {
+  font-size: 30px;
+}
+#news .container .row .nav-tabs li a:hover {
+  background-color: #e92322;
+  color: #ccc;
+}
+#news .container .row .nav-tabs li.active a {
+  background-color: #e92322;
+  color: #ccc;
+}
+#news .container .row .tab-content ul {
+  padding-left: 20px;
+}
+#news .container .row .tab-content ul li {
+  margin-bottom: 20px;
+}
+#footer .row > div a {
+  display: block;
+}
+#footer .row > div a i {
+  font-size: 60px;
+}
+#footer .row > div a:hover {
+  color: #e92322;
+}
